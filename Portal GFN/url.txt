@@ -1,0 +1,1 @@
+https://client.goldenfast.net:2222/evo/user/filemanager/edit?path=/domains/client.goldenfast.net/public_html/templates/seven/viewinvoice.tpl
