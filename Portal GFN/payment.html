@@ -1,0 +1,303 @@
+<style>
+	.portal-checkout-clone .btn-method {
+		font-size: 14px;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		padding: 15px;
+	}
+
+	.portal-checkout-clone .btn-method:hover {
+		color: #292929;
+	}
+
+	.portal-checkout-clone .card-header {
+		padding: 0;
+		background: #F7A200;
+		border: none;
+		border-radius: unset;
+		cursor: pointer;
+		margin-bottom: 0.2em;
+		height: 65px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 32%;
+	}
+
+	.portal-checkout-clone .card-header:first-child {
+		border-top-left-radius: .25rem;
+	}
+
+	.portal-checkout-clone .radioSupport {
+		position: absolute;
+		top: 15px;
+		left: 5px;
+		height: 15px;
+		width: 15px;
+		background-color: #fff;
+		border-radius: 50%;
+		border: 1px solid #F7A200;
+	}
+
+	.portal-checkout-clone .checkcontainer:hover input:checked~.radioSupport,
+	.portal-checkout-clone .checkcontainer input:checked~.radioSupport {
+		background-color: #F7A200;
+	}
+
+	.portal-checkout-clone .checkcontainer input:checked~.radioSupport:after {
+		display: none;
+	}
+
+	.portal-checkout-clone .full-width.img-bg {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		background: #efefef;
+		padding: 4px;
+		border-radius: 5px;
+	}
+
+	.portal-checkout-clone .checkcontainer:hover input~.radioSupport {
+		background-color: white;
+	}
+
+	.portal-checkout-clone .checkcontainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.portal-checkout-clone .checkcontainer img {
+		max-width: 120px;
+		margin-bottom: 5px;
+	}
+
+	.portal-checkout-clone .checkcontainer span.label {
+		font-size: 16px;
+		color: #333;
+		font-weight: bold;
+	}
+
+	.portal-checkout-clone .card-header.active {
+		background-color: #686868;
+		/* Highlight active section */
+	}
+
+	.portal-checkout-clone .card-header.collapsed {
+		background-color: #F7A200;
+		/* Default color for collapsed */
+	}
+</style>
+
+<div class="card payment-method portal-checkout-clone">
+	<div id="accordion">
+		<div class="row">
+			<div class="col-md-5 col-12">
+				<div class="card-header active" id="method2" data-toggle="collapse" data-target="#payMethod2">
+					<h5 class="mb-0 select-payment-method">
+						<div class="btn-method" aria-expanded="true" aria-controls="payMethod2">
+							Metode Pembayaran Virtual Account (Otomatis)
+						</div>
+					</h5>
+				</div>
+
+				<div class="card-header collapsed" id="method3" data-toggle="collapse" data-target="#payMethod3">
+					<h5 class="mb-0 select-payment-method">
+						<div class="btn-method" aria-expanded="false" aria-controls="payMethod3">
+							Metode Pembayaran Bank Transfer (Manual)
+						</div>
+					</h5>
+				</div>
+
+				<div class="card-header collapsed" id="method4" data-toggle="collapse" data-target="#payMethod4">
+					<h5 class="mb-0 select-payment-method">
+						<div class="btn-method" aria-expanded="false" aria-controls="payMethod4">
+							Metode Pembayaran Kartu Kredit dan Lainnya (Otomatis)
+						</div>
+					</h5>
+				</div>
+			</div>
+
+			<div class="col-md-7 col-12 pl-md-0">
+				<div id="payMethod2" class="collapse show" aria-labelledby="method2" data-parent="#accordion">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" checked="checked" name="paymentmethod" value="bcava" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/bcava.png"
+										alt="BCA VA" class="full-width img-bg" />
+									<span class="label">BCA VA</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="mandiriva" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/mandiriva.png"
+										alt="Mandiri VA" class="full-width img-bg" />
+									<span class="label">Mandiri VA</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="briva" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/briva.png"
+										alt="BRI VA" class="full-width img-bg" />
+									<span class="label">BRI VA</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="bniva" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/bniva.png"
+										alt="BNI VA" class="full-width img-bg" />
+									<span class="label">BNI VA</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="atmbersamava" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/atmbersamava.png"
+										alt="payment-1" class="full-width img-bg" />
+									<span class="label">ATM BERSAMA</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="biiva" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/biiva.png"
+										alt="payment-1" class="full-width img-bg" />
+									<span class="label">MAYBANK VA</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="cimbva" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/cimbva.png"
+										alt="payment" class="full-width img-bg" />
+									<span class="label">CIMB VA</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="permatabankva" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/permatabankva.png"
+										alt="payment-1" class="full-width img-bg" />
+									<span class="label">PERMATA VA</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="danamonva" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/danamonva.png"
+										alt="payment" class="full-width img-bg" />
+									<span class="label">DANAMON VA</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="hanabankva" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/hanabankva.png"
+										alt="payment" class="full-width img-bg" />
+									<span class="label">HANABANK VA</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="payMethod3" class="collapse" aria-labelledby="method3" data-parent="#accordion">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="banktransfer" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/bcaapi.png"
+										alt="payment-1" class="full-width img-bg" />
+									<span class="label">BCA</span>
+								</label>
+							</div>
+
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="bankmandiribisnis" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/mandiriva.png"
+										alt="payment" class="full-width img-bg" />
+									<span class="label">MANDIRI</span>
+								</label>
+							</div>
+
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="banktransfer2" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/bankchina.png"
+										alt="payment-1" class="full-width img-bg" />
+									<span class="label">CHINA</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="payMethod4" class="collapse" aria-labelledby="method4" data-parent="#accordion">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="nicepaygateway" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/nicepaygateway.png"
+										alt="payment-1" class="full-width img-bg" />
+									<span class="label">MASTER CARD</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="ipay88_kredivo" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/ipay88_kredivo.png"
+										alt="payment" class="full-width img-bg" />
+									<span class="label">KREDIVO</span>
+								</label>
+							</div>
+							<div class="col-md-6 col-6">
+								<label class="checkcontainer text-center">
+									<input type="radio" name="paymentmethod" value="paypal" />
+									<span class="radioSupport"></span>
+									<img src="https://client.goldenfast.net/images/paymentmethod/paypal.png"
+										alt="payment-1" class="full-width img-bg" />
+									<span class="label">PAYPAL</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div> <!-- col-md-7 col-12 pl-md-0 -->
+		</div> <!-- col-md-5 col-12 -->
+	</div> <!-- accordion -->
+</div> <!-- card payment-method -->
+
+<script>
+	document.querySelectorAll('.card-header').forEach(header => {
+		header.addEventListener('click', function() {
+			document.querySelectorAll('.card-header').forEach(h => h.classList.add('collapsed'));
+			this.classList.remove('collapsed');
+			this.classList.add('active');
+		});
+	});
+</script>
